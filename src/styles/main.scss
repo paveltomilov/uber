@@ -1,0 +1,8 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+@use "./reset";
+@use "./header";
+
+body {
+  color: blue;
+}

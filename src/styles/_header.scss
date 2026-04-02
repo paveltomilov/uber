@@ -1,0 +1,47 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  background: gray;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+
+  &__container {
+    height: 70px;
+  }
+
+  &__logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: linear-gradient(135deg, $primary, $secondary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  &__nav {
+    display: none;
+  }
+
+  &__nav-link {
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  &__menu-btn {
+    font-size: 1.5rem;
+  }
+
+  &__cta {
+    display: none;
+  }
+}
