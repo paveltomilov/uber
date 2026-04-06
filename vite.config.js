@@ -1,7 +1,7 @@
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: "/uber/", // важно! Например '/uber-landing/'
+  base: "/uber/",
   build: {
     outDir: "dist",
     assetsDir: "assets",
