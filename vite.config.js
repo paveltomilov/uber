@@ -1,9 +1,9 @@
+// vite.config.js
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: "/uber/",
+  base: "/", // если сайт в корне
   build: {
     outDir: "dist",
-    assetsDir: "assets",
   },
 });
