@@ -4,65 +4,35 @@
 // 1. АДАПТИВ (Media Queries)
 // ============================================
 
-// Mobile First - от минимальной ширины
-@mixin mobile-sm {
-  @media (min-width: 480px) {
+// ============================================
+// Desktop First с конкретными брейкпоинтами
+// ============================================
+
+// Десктоп (база: 1200px+)
+// Планшеты и ноутбуки (992px - 1199px)
+@mixin laptop {
+  @media (max-width: 1199px) {
     @content;
   }
 }
 
-@mixin mobile {
-  @media (min-width: 576px) {
-    @content;
-  }
-}
-
+// Планшеты (768px - 991px)
 @mixin tablet {
-  @media (min-width: 768px) {
+  @media (max-width: 991px) {
     @content;
   }
 }
 
-@mixin desktop {
-  @media (min-width: 1024px) {
-    @content;
-  }
-}
-
-@mixin desktop-lg {
-  @media (min-width: 1200px) {
-    @content;
-  }
-}
-
-@mixin desktop-xl {
-  @media (min-width: 1400px) {
-    @content;
-  }
-}
-
-// Desktop First - от максимальной ширины
-@mixin mobile-only {
+// Мобильные (576px - 767px)
+@mixin mobile {
   @media (max-width: 767px) {
     @content;
   }
 }
 
-@mixin tablet-only {
-  @media (min-width: 768px) and (max-width: 1023px) {
-    @content;
-  }
-}
-
-@mixin desktop-only {
-  @media (min-width: 1024px) and (max-width: 1199px) {
-    @content;
-  }
-}
-
-// Ретина экраны
-@mixin retina {
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+// Мелкие мобильные (320px - 575px)
+@mixin mobile-sm {
+  @media (max-width: 575px) {
     @content;
   }
 }

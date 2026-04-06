@@ -1,17 +1,25 @@
-// Colors
-$primary: #6366f1;
-$primary-dark: #4f46e5;
-$secondary: #10b981;
-$dark: #1f2937;
-$gray: #6b7280;
-$light-gray: #f3f4f6;
+$primary: #1eacc7;
+$primary-light: #1fbad6;
+$red: #ff5656;
 $white: #ffffff;
+$gray: #999999;
+$dark-light: #222222;
+$dark-mode: #212121;
+$dark: #000000;
 
-// Breakpoints (mobile-first)
+// Gradients (если нужны)
+$gradient-primary: linear-gradient(135deg, $primary, $primary-light);
+$gradient-danger: linear-gradient(135deg, $red, #ff8888);
+
+$border-dotted: 2px dotted rgba($white, 0.3);
+
+// Брейкпоинты
 $breakpoints: (
-  'sm': 640px,
-  'md': 768px,
-  'lg': 1024px,
-  'xl': 1280px,
-  '2xl': 1536px
+  "laptop": 1199px,
+  // ноутбуки и маленькие десктопы
+  "tablet": 991px,
+  // планшеты
+  "mobile": 767px,
+  // мобильные
+  "mobile-sm": 575px, // маленькие мобильные
 );

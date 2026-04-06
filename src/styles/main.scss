@@ -2,7 +2,33 @@
 @use "./mixins" as *;
 @use "./reset";
 @use "./header";
+@use "./fonts";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 body {
-  color: blue;
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+}
+
+// Контейнер (общий для всех секций)
+.container {
+  max-width: 1064px;
+  margin: 0 auto;
+
+  @include laptop {
+    max-width: 960px;
+  }
+
+  @include tablet {
+    max-width: 720px;
+  }
+
+  @include mobile {
+    padding: 0 13px;
+  }
 }
