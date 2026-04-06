@@ -1,34 +1,10 @@
-# .gitlab-ci.yml
-image: node:18
-
-stages:
-  - build
-  - deploy
-
-cache:
-  paths:
-    - node_modules/
-
-build:
-  stage: build
-  script:
-    - npm ci
-    - npm run build
-  artifacts:
-    paths:
-      - dist/
-  only:
-    - main
-    - master
-
-pages:
-  stage: deploy
-  script:
-    - rm -rf public
-    - cp -r dist public
-  artifacts:
-    paths:
-      - public
-  only:
-    - main
-    - master
+# The Docker image that will be used to build your app
+image: node.lts
+create-pages:
+  pages:
+    # The folder that contains the files to be exposed at the Page URL
+    publish: public
+  rules:
+    # This ensures that only pushes to the default branch will trigger
+    # a pages deploy
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
