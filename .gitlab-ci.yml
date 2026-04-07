@@ -23,8 +23,9 @@ pages:
   stage: deploy
   script:
     - rm -rf public
-    - mkdir -p public/uber # создаем папку uber
-    - cp -r dist/* public/uber/ # копируем содержимое dist (НЕ саму папку dist!)
+    - mkdir -p public/root/uber
+    - cp -r dist/* public/root/uber/
+    - ls -la public/root/uber/ # для отладки
   artifacts:
     paths:
       - public
