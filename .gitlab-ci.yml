@@ -18,17 +18,15 @@ build:
       - dist/
   only:
     - main
-    - master
 
 pages:
   stage: deploy
   script:
     - rm -rf public
     - mkdir -p public/uber # создаем папку uber
-    - cp -r dist/* public/uber/ # копируем содержимое dist в public/uber
+    - cp -r dist/* public/uber/ # копируем содержимое dist (НЕ саму папку dist!)
   artifacts:
     paths:
       - public
   only:
     - main
-    - master
