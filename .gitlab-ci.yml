@@ -8,7 +8,7 @@ pages:
     - rm -rf public
     - mkdir public
     # Копируем результат сборки прямо в корень public
-    - cp -r out/* public/
+    - cp -r dist/* public/
   artifacts:
     paths:
       - public
