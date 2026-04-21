@@ -12,14 +12,3 @@ $gradient-primary: linear-gradient(135deg, $primary, $primary-light);
 $gradient-danger: linear-gradient(135deg, $red, #ff8888);
 
 $border-dotted: 2px dotted rgba($white, 0.3);
-
-// Брейкпоинты
-$breakpoints: (
-  "laptop": 1199px,
-  // ноутбуки и маленькие десктопы
-  "tablet": 991px,
-  // планшеты
-  "mobile": 767px,
-  // мобильные
-  "mobile-sm": 575px, // маленькие мобильные
-);

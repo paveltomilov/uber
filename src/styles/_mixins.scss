@@ -18,7 +18,7 @@
 
 // Планшеты (768px - 991px)
 @mixin tablet {
-  @media (max-width: 991px) {
+  @media (max-width: 1023px) {
     @content;
   }
 }

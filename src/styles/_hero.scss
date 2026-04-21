@@ -1,0 +1,59 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.hero {
+  min-height: 800px;
+  margin-top: -86px;
+  padding-top: 152px;
+  background-image: url("../assets/images/hero.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &__container {
+    @include flex-column;
+    @include flex-center;
+  }
+
+  &__title {
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 40%;
+    text-transform: uppercase;
+    text-align: center;
+    color: $white;
+    margin-bottom: 24px;
+  }
+
+  &__subtitle {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 133%;
+    text-transform: uppercase;
+    text-align: center;
+    color: $white;
+    margin-bottom: 16px;
+  }
+
+  &__description {
+    padding: 0 40px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 133%;
+    text-align: center;
+    color: $white;
+    margin-bottom: 26px;
+
+    &-bottom {
+      margin-bottom: 120px;
+    }
+  }
+
+  &__button {
+    padding: 24px 48px;
+  }
+}
+
+.visually-hidden {
+  @include visually-hidden;
+}
