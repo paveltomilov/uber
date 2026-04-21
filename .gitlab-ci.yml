@@ -1,13 +1,16 @@
+image: node:20-alpine
+
 pages:
   stage: deploy
   script:
     - npm install
     - npm run build
+    - rm -rf public
+    - mkdir public
+    # Копируем результат сборки прямо в корень public
+    - cp -r dist/* public/
   artifacts:
     paths:
       - public
-  environment:
-    name: production
-    url: https://paveltomilov.ru/uber # Указываем нужный URL
   only:
     - main
