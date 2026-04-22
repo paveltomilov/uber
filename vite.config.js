@@ -2,7 +2,7 @@
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: "./", // если сайт в корне
+  base: "/projects/uber/",
   build: {
     outDir: "dist",
   },
