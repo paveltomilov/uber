@@ -21,10 +21,17 @@
             class="nav"
             aria-label="Main"
           >
+            <button
+              class="nav__close"
+              aria-label="Закрыть меню"
+            >
+              <span class="nav__close-line"></span>
+              <span class="nav__close-line"></span>
+            </button>
             <ul class="nav__list">
               <li class="nav__item">
                 <a
-                  href="#"
+                  href="#hero"
                   class="nav__link"
                   >Главная</a
                 >
@@ -66,6 +73,14 @@
               </li>
             </ul>
           </nav>
+          <button
+            class="burger"
+            aria-label="menu"
+          >
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+          </button>
         </div>
       </div>
       <div class="header__bottom">
@@ -94,8 +109,12 @@
         </div>
       </div>
     </header>
+    <div class="overlay"></div>
     <main class="main">
-      <section class="hero">
+      <section
+        id="hero"
+        class="hero"
+      >
         <div class="container hero__container">
           <h1 class="visually-hidden">UBER PARTNERS</h1>
           <h2 class="hero__title">КОМПАНИЯ UBER PARTNERS!</h2>
