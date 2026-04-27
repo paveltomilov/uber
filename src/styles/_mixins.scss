@@ -8,29 +8,35 @@
 // Desktop First с конкретными брейкпоинтами
 // ============================================
 
-// Десктоп (база: 1200px+)
-// Планшеты и ноутбуки (992px - 1199px)
+// Ноутбуки и маленькие десктопы (до 1199px)
 @mixin laptop {
   @media (max-width: 1199px) {
     @content;
   }
 }
 
-// Планшеты (768px - 991px)
+// Планшеты и маленькие ноутбуки (до 1023px)
 @mixin tablet {
   @media (max-width: 1023px) {
     @content;
   }
 }
 
-// Мобильные (576px - 767px)
+// Планшеты горизонтальные (1024px - 1199px) - специально для iPad
+@mixin tablet-landscape {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+// Мобильные (до 767px)
 @mixin mobile {
   @media (max-width: 767px) {
     @content;
   }
 }
 
-// Мелкие мобильные (320px - 575px)
+// Мелкие мобильные (до 575px)
 @mixin mobile-sm {
   @media (max-width: 575px) {
     @content;
