@@ -1,0 +1,15 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.card {
+  @include flex-center;
+  gap: 25px;
+
+  &__figure {
+    @include flex-center;
+    min-width: 116px;
+    height: 116px;
+    border-radius: 50%;
+    background-color: #1eacc7;
+  }
+}

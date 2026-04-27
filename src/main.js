@@ -40,11 +40,6 @@ if (burger) {
   burger.addEventListener("click", toggleMenu);
 }
 
-// Закрытие по клику на крестик
-if (navClose) {
-  navClose.addEventListener("click", closeMenu);
-}
-
 // Закрытие по клику на оверлей
 if (overlay) {
   overlay.addEventListener("click", closeMenu);

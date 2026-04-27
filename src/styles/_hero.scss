@@ -53,6 +53,7 @@
 
     @include mobile {
       font-size: 20px;
+      margin-bottom: 67px;
     }
   }
 
@@ -76,6 +77,10 @@
 
   &__button {
     padding: 24px 48px;
+
+    @include mobile {
+      padding: 16px 26px;
+    }
   }
 }
 

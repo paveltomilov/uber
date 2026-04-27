@@ -258,7 +258,7 @@
 
   &.active {
     .burger__line:nth-child(1) {
-      transform: rotate(45deg) translate(7px, 7px);
+      transform: rotate(45deg) translate(4px, 6px);
     }
 
     .burger__line:nth-child(2) {
@@ -266,7 +266,7 @@
     }
 
     .burger__line:nth-child(3) {
-      transform: rotate(-45deg) translate(7px, -7px);
+      transform: rotate(-45deg) translate(0px, -1px);
     }
   }
 }
