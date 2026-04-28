@@ -1,0 +1,15 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.choice {
+  background-image: url(../assets/images/possibilities.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  &__container {
+  }
+
+  &__top {
+    background: $dark;
+  }
+}

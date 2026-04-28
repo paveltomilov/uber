@@ -6,6 +6,7 @@
 @use "./hero";
 @use "./advantages";
 @use "./possibilities";
+@use "./choice";
 
 *,
 *::before,
@@ -38,11 +39,11 @@ body {
 
 .section {
   padding-top: 30px;
-  padding-bottom: 64px;
+  padding-bottom: 30px;
 
   @include mobile {
     padding-top: 20px;
-    padding-bottom: 32px;
+    padding-bottom: 20px;
   }
 }
 
