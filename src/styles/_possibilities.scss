@@ -1,0 +1,84 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.possibilities {
+  background-image: url(../assets/images/possibilities.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &__container {
+    @include flex-column-center;
+  }
+
+  &__title {
+    background: $dark;
+    margin-bottom: 33px;
+  }
+
+  &__subtitle {
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 126%;
+    text-transform: uppercase;
+    text-align: center;
+    color: $dark;
+    margin-bottom: 9px;
+    white-space: nowrap;
+
+    @include mobile {
+      font-size: 16px;
+      line-height: 100%;
+      margin-bottom: 19px;
+    }
+  }
+
+  &__info {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 124%;
+    text-align: center;
+    color: $dark-light;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 67px;
+    grid-row-gap: 19px;
+  }
+
+  &__card {
+    width: 320px;
+    height: 280px;
+    padding: 10px;
+    @include flex-column-center;
+
+    &-title {
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 129%;
+      text-transform: uppercase;
+      text-align: center;
+      color: $white;
+    }
+
+    &-button {
+      width: 26px;
+      height: 26px;
+      @include flex-center;
+      background: $dark;
+      border: none;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+    }
+
+    &--1 {
+      background-image: url("../assets/images/card1.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+}

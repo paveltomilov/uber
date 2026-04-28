@@ -5,10 +5,15 @@
   height: 800px;
   margin-top: -86px;
   padding-top: 152px;
+  padding-bottom: 186px;
   background-image: url("../assets/images/hero.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  @include tablet {
+    padding-bottom: 34px;
+  }
 
   @include mobile {
     height: 400px;
@@ -22,6 +27,8 @@
   &__container {
     @include flex-column;
     @include flex-center;
+
+    height: 100%;
   }
 
   &__title {
@@ -64,19 +71,20 @@
     line-height: 133%;
     text-align: center;
     color: $white;
-    margin-bottom: 26px;
+    margin-bottom: 25px;
+
+    @include laptop {
+      padding: 0;
+    }
 
     @include mobile {
       display: none;
-    }
-
-    &-bottom {
-      margin-bottom: 120px;
     }
   }
 
   &__button {
     padding: 24px 48px;
+    margin-top: auto;
 
     @include mobile {
       padding: 16px 26px;
