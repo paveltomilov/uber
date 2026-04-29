@@ -1,459 +1,598 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="/favicon.svg"
-    />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-    <title>uber</title>
-  </head>
-  <body>
-    <header class="header">
-      <div class="header__top">
-        <div class="container header__top-container">
-          <nav
-            class="nav"
-            aria-label="Main"
-          >
-            <ul class="nav__list">
-              <li class="nav__item">
-                <a
-                  href="#hero"
-                  class="nav__link"
-                  >Главная</a
-                >
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon"
+    type="image/svg+xml"
+    href="/favicon.svg" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0" />
+  <title>uber</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__top">
+      <div class="container header__top-container">
+        <nav class="nav"
+          aria-label="Main">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#hero"
+                class="nav__link">Главная</a>
+            </li>
+            <li class="nav__item">
+              <a href="#advantages"
+                class="nav__link">Со своим автомобилем
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#possibilities"
+                class="nav__link">На автомобиле компании</a>
+            </li>
+            <li class="nav__item">
+              <a href="#requirements"
+                class="nav__link">Требования</a>
+            </li>
+            <li class="nav__item">
+              <a href="#"
+                class="nav__link">Контакты</a>
+            </li>
+            <li class="nav__item">
+              <a href="#"
+                class="nav__link">Оставить заявку</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="burger"
+          aria-label="menu">
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </button>
+      </div>
+    </div>
+    <div class="header__bottom">
+      <div class="container header__bottom-container">
+        <div class="logo">
+          <img class="logo__img"
+            src="/src/assets/images/uber-logo.png"
+            alt="logo">
+          <span class="logo__description">Официальный партнер Uber в Москве</span>
+        </div>
+        <div class="phone">
+          <div class="phone__description">
+            <span class="phone__description-text">Звоните нам ежедневно</span>
+            <a class="phone__description-link"
+              href="tel:74957970988">8 495 797 09 88</a>
+          </div>
+          <button class="button button-reset phone__button">
+            заказать звонок
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="overlay"></div>
+  <main class="main">
+    <section id="hero"
+      class="hero">
+      <div class="container hero__container">
+        <h1 class="visually-hidden">UBER PARTNERS</h1>
+        <h2 class="hero__title">КОМПАНИЯ UBER PARTNERS!</h2>
+        <p class="hero__subtitle">ПРИГЛАШАЕМ ВОДИТЕЛЕЙ! НА СВОЕМ АВТО!</p>
+        <p class="hero__description">
+          Компания UBER динамически развивающаяся. Компания на рынке занимает
+          лидирующее место средитаксомоторных компаний, Компания абсолютно
+          прозрачная вы можете контролировать все процессы у себя в личном
+          кабинете. Бонуcная система.Помимо выполненной работы по заказам,
+          компания начисляет бонусы запиковое время.
+        </p>
+        <p class="hero__description hero__description-bottom">
+          Мы одни из партнеров и зарекомендовали себя как одна из лучших
+          команд в городе Москве. Водители у насзарабатывают от 80000- 120000
+          в месяц.
+        </p>
+        <button class="button button-reset hero__button">
+          отправить заявку!
+        </button>
+      </div>
+    </section>
+    <section id="advantages"
+      class="section advantages">
+      <div class="container advantages__container">
+        <h3 class="section-title advantages__title">преимущества</h3>
+        <h4 class="advantages__subtitle">8 причин начать работать с нами</h4>
+        <div class="advantages__grid">
+          <article class="advantages__card">
+            <div class="advantages__card-figure">
+              <img src="./src/assets/images/icon1.svg"
+                alt="Иконка"
+                class="advantages__card-image">
+            </div>
+            <div class="advantages__card-body">
+              <h5 class="advantages__card-title">
+                Никаких наличных, оплата происходит автоматически
+              </h5>
+              <p class="advantages__card-copy">
+                Стоимость поездки оплачивается пассажиром с привязанной
+                банковской карты, т.е. нет никаких рисков связанных с
+                перевозкой наличности как для пассажира, так и для водителя,
+                Вам не нужно искать мелкие деньги для размена.
+              </p>
+            </div>
+          </article>
+          <article class="advantages__card">
+            <div class="advantages__card-figure">
+              <img src="./src/assets/images/icon2.svg"
+                alt="Иконка"
+                class="advantages__card-image">
+            </div>
+            <div class="advantages__card-body">
+              <h5 class="advantages__card-title">
+                Высокий доход с гарантированными выплатами
+              </h5>
+              <p class="advantages__card-copy">
+                Мы выплачиваем заработную плату на личную банковскую карту
+                водителя! Вам не нужно оформлять ООО, ИП, платить налоги,
+                подавать декларацию, оплачивать бухгалтерские услуги и ведение
+                банковского счета.
+              </p>
+            </div>
+          </article>
+
+          <article class="advantages__card">
+            <div class="advantages__card-figure">
+              <img src="./src/assets/images/icon3.svg"
+                alt="Иконка"
+                class="advantages__card-image">
+            </div>
+            <div class="advantages__card-body">
+              <h5 class="advantages__card-title">
+                Комфортное, прозрачное и простое подключение
+              </h5>
+              <p class="advantages__card-copy">
+                Мы подключаем дистанционно и бесплатно, Вам нет необходимости
+                приезжать к нам! Вы присылаете нам копии документов, мы
+                регистрируем Вас и присылаем данные для подключения, через 1-2
+                дня Вы можете начинать работать!
+              </p>
+            </div>
+          </article>
+
+          <article class="advantages__card">
+            <div class="advantages__card-figure">
+              <img src="./src/assets/images/icon4.svg"
+                alt="Иконка"
+                class="advantages__card-image">
+            </div>
+            <div class="advantages__card-body">
+              <h5 class="advantages__card-title">Круглосуточная поддержка</h5>
+              <p class="advantages__card-copy">
+                В Uber действует круглосуточная поддержка водителей по
+                электронной почте. Если что-то непонятно, Вы всегда можете
+                задать вопрос через On-line консультацию.
+              </p>
+            </div>
+          </article>
+
+          <article class="advantages__card">
+            <div class="advantages__card-figure">
+              <img src="./src/assets/images/icon5.svg"
+                alt="Иконка"
+                class="advantages__card-image">
+            </div>
+            <div class="advantages__card-body">
+              <h5 class="advantages__card-title">Комиссия 8% + БОНУСЫ</h5>
+              <p class="advantages__card-copy">
+                У нас минимальная комиссия и мы выплачиваем бонусы за каждую
+                поездку, некоторые наши конкуренты оставляют бонусы себе. Мы
+                работаем честно и с нами водители зарабатывают больше!
+              </p>
+            </div>
+          </article>
+
+          <article class="advantages__card">
+            <div class="advantages__card-figure">
+              <img src="./src/assets/images/icon6.svg"
+                alt="Иконка"
+                class="advantages__card-image">
+            </div>
+            <div class="advantages__card-body">
+              <h5 class="advantages__card-title">
+                Работа в удобное время, никаких графиков
+              </h5>
+              <p class="advantages__card-copy">
+                Вы просто нажимаете кнопку выйти на линию для начала работы,
+                когда решите закончить, нажимаете выйти с линии. Вы можете
+                подрабатывать только утром, вечером, в выходные или
+                праздничные дни!
+              </p>
+            </div>
+          </article>
+
+          <article class="advantages__card">
+            <div class="advantages__card-figure">
+              <img src="./src/assets/images/icon7.svg"
+                alt="Иконка"
+                class="advantages__card-image">
+            </div>
+            <div class="advantages__card-body">
+              <h5 class="advantages__card-title">
+                Всегда большое количество заказов
+              </h5>
+              <p class="advantages__card-copy">
+                Приложение показывает, где на данный момент больше всего
+                заказов и где действуют повышенные тарифы. У Вас не будет
+                простоя и холостых пробегов. Наши пассажиры всегда приятные и
+                абсолютно неконфликтные люди, которых приятно возить.
+              </p>
+            </div>
+          </article>
+
+          <article class="advantages__card">
+            <div class="advantages__card-figure">
+              <img src="./src/assets/images/icon8.svg"
+                alt="Иконка"
+                class="advantages__card-image">
+            </div>
+            <div class="advantages__card-body">
+              <h5 class="advantages__card-title">Без шашечек и наклеек</h5>
+              <p class="advantages__card-copy">
+                Вам не нужно менять цвет, устанавливать «шашки» на автомобиль
+                и обклеивать его наклейками.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="possibilities"
+      class="section possibilities">
+      <div class="container possibilities__container">
+        <h3 class="section-title possibilities__title">возможности</h3>
+        <h4 class="possibilities__subtitle">мобильное приложение убер</h4>
+        <p class="possibilities__info">
+          Сделайте заказ, совершите поездку и оплатите ее стоимость, используя
+          свой мобильный телефон
+        </p>
+        <div class="possibilities__grid">
+          <article class="possibilities__card possibilities__card--1">
+            <h5 class="possibilities__card-title">
+              оформление заказа одним касанием
+            </h5>
+            <button class="button-reset possibilities__card-button">
+              <svg width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 6H14V8H8V14H6V8H0V6H6V0H8V6Z"
+                  fill="#1EACC7" />
+              </svg>
+            </button>
+          </article>
+          <article class="possibilities__card possibilities__card--2">
+            <h5 class="possibilities__card-title">надежная подача</h5>
+            <button class="button-reset possibilities__card-button">
+              <svg width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 6H14V8H8V14H6V8H0V6H6V0H8V6Z"
+                  fill="#1EACC7" />
+              </svg>
+            </button>
+          </article>
+          <article class="possibilities__card possibilities__card--3">
+            <h5 class="possibilities__card-title">прозрачные цены</h5>
+            <button class="button-reset possibilities__card-button">
+              <svg width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 6H14V8H8V14H6V8H0V6H6V0H8V6Z"
+                  fill="#1EACC7" />
+              </svg>
+            </button>
+          </article>
+          <article class="possibilities__card possibilities__card--4">
+            <h5 class="possibilities__card-title">безналичная оплата</h5>
+            <button class="button-reset possibilities__card-button">
+              <svg width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 6H14V8H8V14H6V8H0V6H6V0H8V6Z"
+                  fill="#1EACC7" />
+              </svg>
+            </button>
+          </article>
+          <article class="possibilities__card possibilities__card--5">
+            <h5 class="possibilities__card-title">обратная связь</h5>
+            <button class="button-reset possibilities__card-button">
+              <svg width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 6H14V8H8V14H6V8H0V6H6V0H8V6Z"
+                  fill="#1EACC7" />
+              </svg>
+            </button>
+          </article>
+          <article class="possibilities__card possibilities__card--6">
+            <h5 class="possibilities__card-title">
+              разделить стоимость поездки
+            </h5>
+            <button class="button-reset possibilities__card-button">
+              <svg width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 6H14V8H8V14H6V8H0V6H6V0H8V6Z"
+                  fill="#1EACC7" />
+              </svg>
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="choice"
+      class="section choice">
+      <div class="choice__top">
+        <div class="container choice__container">
+          <h3 class="section-title choice__title">возможности</h3>
+          <h4 class="choice__subtitle">Выбор - отличная штука!</h4>
+          <p class="choice__info">
+            Закажите автомобиль, который подходит вам по стилю и бюджету
+          </p>
+          <picture class="choice__img">
+            <source media="(max-width: 768px)"
+              srcset="/src/assets/images/auto-tablet.png" />
+            <img src="/src/assets/images/auto.png"
+              alt="Автомобиль" />
+          </picture>
+          <p class="choice__top-info">
+            Машины на&nbsp;каждый&nbsp;день. Лучше,&nbsp;быстрее
+            и&nbsp;дешевле, чем такси
+          </p>
+        </div>
+      </div>
+      <div class="choice__bottom">
+        <div class="container">
+          <p class="choice__bottom-info">
+            Машины на&nbsp;каждый&nbsp;день. Лучше,&nbsp;быстрее
+            и&nbsp;дешевле, чем такси
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="requirements"
+      class="section requirements">
+      <div class="container requirements__container">
+        <h2 class="section-title requirements__title">возможности</h2>
+        <h3 class="requirements__subtitle">условия и требования</h3>
+        <div class="requirements__flex-top">
+          <div class="requirements__column">
+            <h4 class="requirements__column-title">
+              УСЛОВИЯ: со своим авто:
+            </h4>
+            <ul class="requirements__list">
+              <li class="requirements__list-item requirements__list-item--blue">
+                Подключаем к системе UBER под 10%.
               </li>
-              <li class="nav__item">
-                <a
-                  href="#advantages"
-                  class="nav__link"
-                  >Со своим автомобилем
-                </a>
+              <li class="requirements__list-item requirements__list-item--blue">
+                Ни каких взносов 0%!
               </li>
-              <li class="nav__item">
-                <a
-                  href="#possibilities"
-                  class="nav__link"
-                  >На автомобиле компании</a
-                >
+              <li class="requirements__list-item requirements__list-item--blue">
+                Можем подключать удаленно без приезда в офис
               </li>
-              <li class="nav__item">
-                <a
-                  href="#"
-                  class="nav__link"
-                  >Требования</a
-                >
+              <li class="requirements__list-item requirements__list-item--blue">
+                ИП не требуется
               </li>
-              <li class="nav__item">
-                <a
-                  href="#"
-                  class="nav__link"
-                  >Контакты</a
-                >
+              <li class="requirements__list-item requirements__list-item--blue">
+                Заказы распределяются без учета рейтинга ближайшим водителям
               </li>
-              <li class="nav__item">
-                <a
-                  href="#"
-                  class="nav__link"
-                  >Оставить заявку</a
-                >
+              <li class="requirements__list-item requirements__list-item--blue">
+                Работа только по безналичному расчету
+              </li>
+              <li class="requirements__list-item requirements__list-item--blue">
+                Деньги перечисляем на карту водителю или наличными в офисе
               </li>
             </ul>
-          </nav>
-          <button
-            class="burger"
-            aria-label="menu"
-          >
-            <span class="burger__line"></span>
-            <span class="burger__line"></span>
-            <span class="burger__line"></span>
-          </button>
-        </div>
-      </div>
-      <div class="header__bottom">
-        <div class="container header__bottom-container">
-          <div class="logo">
-            <img
-              class="logo__img"
-              src="/src/assets/images/uber-logo.png"
-              alt="logo"
-            />
-            <span class="logo__description"
-              >Официальный партнер Uber в Москве</span
-            >
+            <p class="requirements__note">
+              В день заработок составляет 7000-12000р + бонус 3000т рублей
+            </p>
           </div>
-          <div class="phone">
-            <div class="phone__description">
-              <span class="phone__description-text">Звоните нам ежедневно</span>
-              <a
-                class="phone__description-link"
-                href="tel:74957970988"
-                >8 495 797 09 88</a
-              >
-            </div>
-            <button class="button button-reset phone__button">
-              заказать звонок
-            </button>
-          </div>
-        </div>
-      </div>
-    </header>
-    <div class="overlay"></div>
-    <main class="main">
-      <section
-        id="hero"
-        class="hero"
-      >
-        <div class="container hero__container">
-          <h1 class="visually-hidden">UBER PARTNERS</h1>
-          <h2 class="hero__title">КОМПАНИЯ UBER PARTNERS!</h2>
-          <p class="hero__subtitle">ПРИГЛАШАЕМ ВОДИТЕЛЕЙ! НА СВОЕМ АВТО!</p>
-          <p class="hero__description">
-            Компания UBER динамически развивающаяся. Компания на рынке занимает
-            лидирующее место средитаксомоторных компаний, Компания абсолютно
-            прозрачная вы можете контролировать все процессы у себя в личном
-            кабинете. Бонуcная система.Помимо выполненной работы по заказам,
-            компания начисляет бонусы запиковое время.
-          </p>
-          <p class="hero__description hero__description-bottom">
-            Мы одни из партнеров и зарекомендовали себя как одна из лучших
-            команд в городе Москве. Водители у насзарабатывают от 80000- 120000
-            в месяц.
-          </p>
-          <button class="button button-reset hero__button">
-            отправить заявку!
-          </button>
-        </div>
-      </section>
-      <section
-        id="advantages"
-        class="section advantages"
-      >
-        <div class="container advantages__container">
-          <h3 class="section-title advantages__title">преимущества</h3>
-          <h4 class="section-subtitle advantages__subtitle">
-            8 причин начать работать с нами
-          </h4>
-          <div class="advantages__grid">
-            <article class="advantages__card">
-              <div class="advantages__card-figure">
-                <img
-                  src="./src/assets/images/icon1.svg"
-                  alt="Иконка"
-                  class="advantages__card-image"
-                />
-              </div>
-              <div class="advantages__card-body">
-                <h5 class="advantages__card-title">
-                  Никаких наличных, оплата происходит автоматически
-                </h5>
-                <p class="advantages__card-copy">
-                  Стоимость поездки оплачивается пассажиром с привязанной
-                  банковской карты, т.е. нет никаких рисков связанных с
-                  перевозкой наличности как для пассажира, так и для водителя,
-                  Вам не нужно искать мелкие деньги для размена.
-                </p>
-              </div>
-            </article>
-            <article class="advantages__card">
-              <div class="advantages__card-figure">
-                <img
-                  src="./src/assets/images/icon2.svg"
-                  alt="Иконка"
-                  class="advantages__card-image"
-                />
-              </div>
-              <div class="advantages__card-body">
-                <h5 class="advantages__card-title">
-                  Высокий доход с гарантированными выплатами
-                </h5>
-                <p class="advantages__card-copy">
-                  Мы выплачиваем заработную плату на личную банковскую карту
-                  водителя! Вам не нужно оформлять ООО, ИП, платить налоги,
-                  подавать декларацию, оплачивать бухгалтерские услуги и ведение
-                  банковского счета.
-                </p>
-              </div>
-            </article>
-
-            <article class="advantages__card">
-              <div class="advantages__card-figure">
-                <img
-                  src="./src/assets/images/icon3.svg"
-                  alt="Иконка"
-                  class="advantages__card-image"
-                />
-              </div>
-              <div class="advantages__card-body">
-                <h5 class="advantages__card-title">
-                  Комфортное, прозрачное и простое подключение
-                </h5>
-                <p class="advantages__card-copy">
-                  Мы подключаем дистанционно и бесплатно, Вам нет необходимости
-                  приезжать к нам! Вы присылаете нам копии документов, мы
-                  регистрируем Вас и присылаем данные для подключения, через 1-2
-                  дня Вы можете начинать работать!
-                </p>
-              </div>
-            </article>
-
-            <article class="advantages__card">
-              <div class="advantages__card-figure">
-                <img
-                  src="./src/assets/images/icon4.svg"
-                  alt="Иконка"
-                  class="advantages__card-image"
-                />
-              </div>
-              <div class="advantages__card-body">
-                <h5 class="advantages__card-title">Круглосуточная поддержка</h5>
-                <p class="advantages__card-copy">
-                  В Uber действует круглосуточная поддержка водителей по
-                  электронной почте. Если что-то непонятно, Вы всегда можете
-                  задать вопрос через On-line консультацию.
-                </p>
-              </div>
-            </article>
-
-            <article class="advantages__card">
-              <div class="advantages__card-figure">
-                <img
-                  src="./src/assets/images/icon5.svg"
-                  alt="Иконка"
-                  class="advantages__card-image"
-                />
-              </div>
-              <div class="advantages__card-body">
-                <h5 class="advantages__card-title">Комиссия 8% + БОНУСЫ</h5>
-                <p class="advantages__card-copy">
-                  У нас минимальная комиссия и мы выплачиваем бонусы за каждую
-                  поездку, некоторые наши конкуренты оставляют бонусы себе. Мы
-                  работаем честно и с нами водители зарабатывают больше!
-                </p>
-              </div>
-            </article>
-
-            <article class="advantages__card">
-              <div class="advantages__card-figure">
-                <img
-                  src="./src/assets/images/icon6.svg"
-                  alt="Иконка"
-                  class="advantages__card-image"
-                />
-              </div>
-              <div class="advantages__card-body">
-                <h5 class="advantages__card-title">
-                  Работа в удобное время, никаких графиков
-                </h5>
-                <p class="advantages__card-copy">
-                  Вы просто нажимаете кнопку выйти на линию для начала работы,
-                  когда решите закончить, нажимаете выйти с линии. Вы можете
-                  подрабатывать только утром, вечером, в выходные или
-                  праздничные дни!
-                </p>
-              </div>
-            </article>
-
-            <article class="advantages__card">
-              <div class="advantages__card-figure">
-                <img
-                  src="./src/assets/images/icon7.svg"
-                  alt="Иконка"
-                  class="advantages__card-image"
-                />
-              </div>
-              <div class="advantages__card-body">
-                <h5 class="advantages__card-title">
-                  Всегда большое количество заказов
-                </h5>
-                <p class="advantages__card-copy">
-                  Приложение показывает, где на данный момент больше всего
-                  заказов и где действуют повышенные тарифы. У Вас не будет
-                  простоя и холостых пробегов. Наши пассажиры всегда приятные и
-                  абсолютно неконфликтные люди, которых приятно возить.
-                </p>
-              </div>
-            </article>
-
-            <article class="advantages__card">
-              <div class="advantages__card-figure">
-                <img
-                  src="./src/assets/images/icon8.svg"
-                  alt="Иконка"
-                  class="advantages__card-image"
-                />
-              </div>
-              <div class="advantages__card-body">
-                <h5 class="advantages__card-title">Без шашечек и наклеек</h5>
-                <p class="advantages__card-copy">
-                  Вам не нужно менять цвет, устанавливать «шашки» на автомобиль
-                  и обклеивать его наклейками.
-                </p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-      <section
-        id="possibilities"
-        class="section possibilities"
-      >
-        <div class="container possibilities__container">
-          <h3 class="section-title possibilities__title">возможности</h3>
-          <h4 class="section-subtitle possibilities__subtitle">
-            мобильное приложение убер
-          </h4>
-          <p class="possibilities__info">
-            Сделайте заказ, совершите поездку и оплатите ее стоимость, используя
-            свой мобильный телефон
-          </p>
-          <div class="possibilities__grid">
-            <article class="possibilities__card possibilities__card--1">
-              <h5 class="possibilities__card-title">
-                оформление заказа одним касанием
-              </h5>
-              <button class="button-reset possibilities__card-button">
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 14 14"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M8 6H14V8H8V14H6V8H0V6H6V0H8V6Z"
-                    fill="#1EACC7"
-                  />
-                </svg>
-              </button>
-            </article>
-            <article class="possibilities__card possibilities__card--2">
-              <h5 class="possibilities__card-title">надежная подача</h5>
-              <button class="button-reset possibilities__card-button">
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 14 14"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M8 6H14V8H8V14H6V8H0V6H6V0H8V6Z"
-                    fill="#1EACC7"
-                  />
-                </svg>
-              </button>
-            </article>
-            <article class="possibilities__card possibilities__card--3">
-              <h5 class="possibilities__card-title">прозрачные цены</h5>
-              <button class="button-reset possibilities__card-button">
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 14 14"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M8 6H14V8H8V14H6V8H0V6H6V0H8V6Z"
-                    fill="#1EACC7"
-                  />
-                </svg>
-              </button>
-            </article>
-            <article class="possibilities__card possibilities__card--4">
-              <h5 class="possibilities__card-title">безналичная оплата</h5>
-              <button class="button-reset possibilities__card-button">
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 14 14"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M8 6H14V8H8V14H6V8H0V6H6V0H8V6Z"
-                    fill="#1EACC7"
-                  />
-                </svg>
-              </button>
-            </article>
-            <article class="possibilities__card possibilities__card--5">
-              <h5 class="possibilities__card-title">обратная связь</h5>
-              <button class="button-reset possibilities__card-button">
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 14 14"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M8 6H14V8H8V14H6V8H0V6H6V0H8V6Z"
-                    fill="#1EACC7"
-                  />
-                </svg>
-              </button>
-            </article>
-            <article class="possibilities__card possibilities__card--6">
-              <h5 class="possibilities__card-title">
-                разделить стоимость поездки
-              </h5>
-              <button class="button-reset possibilities__card-button">
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 14 14"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M8 6H14V8H8V14H6V8H0V6H6V0H8V6Z"
-                    fill="#1EACC7"
-                  />
-                </svg>
-              </button>
-            </article>
-          </div>
-        </div>
-      </section>
-      <section
-        id="choice"
-        class="section choice"
-      >
-        <div class="choice__top">
-          <div class="container choice__container">
-            <h3 class="section-title choice__title">возможности</h3>
-            <h4 class="section-subtitle choice__subtitle">
-              Выбор - отличная штука!
+          <div class="requirements__column">
+            <h4 class="requirements__column-title">
+              УСЛОВИЯ: на авто компании:
             </h4>
-            <p class="choice__info">
-              Закажите автомобиль, который подходит вам по стилю и бюджету
-            </p>
-            <img
-              src="/src/assets/images/auto.jpg"
-              alt="Автомобиль"
-            />
+            <ul class="requirements__list">
+              <li class="requirements__list-item requirements__list-item--blue">
+                Предоставляем авто без залога
+              </li>
+              <li class="requirements__list-item requirements__list-item--blue">
+                Без ежедневных выплат по аренде
+              </li>
+              <li class="requirements__list-item requirements__list-item--blue">
+                Среда пятница и суббота работа на компанию остальные дни вы
+                работаете на себя
+              </li>
+            </ul>
           </div>
         </div>
-        <div class="choice__bottom">
-          <div class="container">
-            <p class="choice__bottom-info">
-              Машины на каждый день.Лучше, быстрее и дешевле, чем такси
-            </p>
+        <div class="requirements__flex-bottom">
+          <div class="requirements__column">
+            <h4 class="requirements__column-title requirements__column-title--bottom">
+              ТРЕБОВАНИЕ:
+            </h4>
+            <ul class="requirements__list">
+              <li class="requirements__list-item requirements__list-item--red">
+                Наличие автомобиля без рекламы
+              </li>
+              <li class="requirements__list-item requirements__list-item--red">
+                Автомобиль не должен быть желтый и не с желтыми номерами
+              </li>
+              <li class="requirements__list-item requirements__list-item--red">
+                Машина не старше 3 лет
+              </li>
+              <li class="requirements__list-item requirements__list-item--red">
+                Стаж вождения не менее 3 лет
+              </li>
+              <li class="requirements__list-item requirements__list-item--red">
+                Девайс на системе андроид 4.0 и выше(самсунг)
+              </li>
+            </ul>
+          </div>
+          <div class="requirements__column">
+            <h4 class="requirements__column-title requirements__column-title--bottom">
+              ДОКУМЕНТЫ:
+            </h4>
+            <ul class="requirements__list">
+              <li class="requirements__list-item requirements__list-item--red">
+                Права 2 стороны
+              </li>
+              <li class="requirements__list-item requirements__list-item--red">
+                Паспорт лицевая сторона
+              </li>
+              <li class="requirements__list-item requirements__list-item--red">
+                СтС
+              </li>
+              <li class="requirements__list-item requirements__list-item--red">
+                Лицензия (если есть)
+              </li>
+              <li class="requirements__list-item requirements__list-item--red">
+                Номер телефона
+              </li>
+              <li class="requirements__list-item requirements__list-item--red">
+                Номер карты для перечисления денег(указать в письме)!
+              </li>
+            </ul>
           </div>
         </div>
-      </section>
-    </main>
-    <script
-      type="module"
-      src="/src/main.js"
-    ></script>
-  </body>
+      </div>
+    </section>
+    <section id="cities"
+      class="section cities">
+      <div class="cities__container">
+        <div class="cities__container-top">
+          <h3 class="section-title cities__title">города</h3>
+          <h4 class="cities__subtitle">По всему миру</h4>
+          <p class="cities__info">Мы в вашем городе и по всему миру</p>
+        </div>
+        <div class="cities__container-bottom">
+          <a class="cities__link"
+            href="/">посмотреть все города</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="circles">
+      <div class="circles__item"><svg width="18"
+          height="18"
+          viewBox="0 0 18 18"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_10_2)">
+            <path
+              d="M11.8193 2.98875H13.4381V0.12675C13.1588 0.08775 12.1983 0 11.0797 0C8.74572 0 7.14686 1.49025 7.14686 4.22925V6.75H4.57124V9.9495H7.14686V18H10.3047V9.95025H12.7761L13.1685 6.75075H10.3039V4.5465C10.3047 3.62175 10.55 2.98875 11.8193 2.98875Z"
+              fill="white" />
+          </g>
+          <defs>
+            <clipPath id="clip0_10_2">
+              <rect width="17.7323"
+                height="18"
+                fill="white" />
+            </clipPath>
+          </defs>
+        </svg>
+      </div>
+      <div class="circles__item"><svg width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M20 3.79875C19.2563 4.125 18.4637 4.34125 17.6375 4.44625C18.4875 3.93875 19.1363 3.14125 19.4412 2.18C18.6488 2.6525 17.7738 2.98625 16.8412 3.1725C16.0887 2.37125 15.0162 1.875 13.8462 1.875C11.5763 1.875 9.74875 3.7175 9.74875 5.97625C9.74875 6.30125 9.77625 6.61375 9.84375 6.91125C6.435 6.745 3.41875 5.11125 1.3925 2.6225C1.03875 3.23625 0.83125 3.93875 0.83125 4.695C0.83125 6.115 1.5625 7.37375 2.6525 8.1025C1.99375 8.09 1.3475 7.89875 0.8 7.5975C0.8 7.61 0.8 7.62625 0.8 7.6425C0.8 9.635 2.22125 11.29 4.085 11.6712C3.75125 11.7625 3.3875 11.8062 3.01 11.8062C2.7475 11.8062 2.4825 11.7913 2.23375 11.7362C2.765 13.36 4.2725 14.5538 6.065 14.5925C4.67 15.6838 2.89875 16.3412 0.98125 16.3412C0.645 16.3412 0.3225 16.3263 0 16.285C1.81625 17.4563 3.96875 18.125 6.29 18.125C13.835 18.125 17.96 11.875 17.96 6.4575C17.96 6.27625 17.9538 6.10125 17.945 5.9275C18.7588 5.35 19.4425 4.62875 20 3.79875Z"
+            fill="white" />
+        </svg>
+      </div>
+      <div class="circles__item"><svg width="14"
+          height="14"
+          viewBox="0 0 14 14"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_10_23)">
+            <path
+              d="M12.6 0H1.4C0.63 0 0 0.63 0 1.4V12.6C0 13.37 0.63 14 1.4 14H12.6C13.37 14 14 13.37 14 12.6V1.4C14 0.63 13.37 0 12.6 0ZM4.2 11.9H2.1V5.6H4.2V11.9ZM3.15 4.41C2.45 4.41 1.89 3.85 1.89 3.15C1.89 2.45 2.45 1.89 3.15 1.89C3.85 1.89 4.41 2.45 4.41 3.15C4.41 3.85 3.85 4.41 3.15 4.41ZM11.9 11.9H9.8V8.19C9.8 7.63003 9.31 7.14 8.75 7.14C8.19 7.14 7.7 7.63003 7.7 8.19V11.9H5.6V5.6H7.7V6.44C8.05 5.88 8.82 5.46 9.45 5.46C10.78 5.46 11.9 6.58 11.9 7.91V11.9Z"
+              fill="white" />
+          </g>
+          <defs>
+            <clipPath id="clip0_10_23">
+              <rect width="14"
+                height="14"
+                fill="white" />
+            </clipPath>
+          </defs>
+        </svg>
+      </div>
+      <div class="circles__item"><svg width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_10_42)">
+            <path
+              d="M15.9843 4.70404C15.9469 3.8539 15.8094 3.26944 15.6124 2.76299C15.4093 2.22541 15.0967 1.74412 14.6872 1.34401C14.2871 0.937683 13.8026 0.621948 13.2713 0.421957C12.7619 0.22502 12.1805 0.0875415 11.3304 0.0500586C10.4739 0.00940124 10.202 0 8.02967 0C5.85737 0 5.58546 0.00940124 4.73215 0.0468842C3.88201 0.0843671 3.29754 0.221967 2.79122 0.418783C2.25352 0.621948 1.77222 0.934509 1.37212 1.34401C0.96579 1.74412 0.650176 2.22858 0.450064 2.75994C0.253126 3.26944 0.115648 3.85073 0.0781653 4.70087C0.0375079 5.55736 0.0281067 5.82926 0.0281067 8.00156C0.0281067 10.1739 0.0375079 10.4458 0.0749908 11.2991C0.112474 12.1492 0.250074 12.7337 0.447012 13.2401C0.650176 13.7777 0.96579 14.259 1.37212 14.6591C1.77222 15.0654 2.25669 15.3812 2.78804 15.5812C3.29754 15.7781 3.87883 15.9156 4.7291 15.9531C5.58229 15.9907 5.85432 16 8.02661 16C10.1989 16 10.4708 15.9907 11.3241 15.9531C12.1743 15.9156 12.7587 15.7781 13.2651 15.5812C14.3403 15.1654 15.1905 14.3153 15.6062 13.2401C15.803 12.7306 15.9406 12.1492 15.9781 11.2991C16.0156 10.4458 16.025 10.1739 16.025 8.00156C16.025 5.82926 16.0218 5.55736 15.9843 4.70404ZM14.5435 11.2366C14.5091 12.018 14.3778 12.4399 14.2684 12.7212C13.9996 13.4183 13.4464 13.9715 12.7493 14.2403C12.468 14.3497 12.043 14.481 11.2647 14.5153C10.4208 14.5529 10.1677 14.5622 8.03284 14.5622C5.89803 14.5622 5.64175 14.5529 4.80089 14.5153C4.01949 14.481 3.59753 14.3497 3.31622 14.2403C2.96935 14.1121 2.65362 13.909 2.39734 13.6433C2.13167 13.3838 1.9285 13.0713 1.8003 12.7244C1.69091 12.4431 1.55966 12.018 1.52535 11.2397C1.48774 10.3958 1.47846 10.1426 1.47846 8.00779C1.47846 5.87297 1.48774 5.6167 1.52535 4.77596C1.55966 3.99455 1.69091 3.5726 1.8003 3.29129C1.9285 2.9443 2.13167 2.62869 2.40052 2.37229C2.65985 2.10661 2.97241 1.90345 3.3194 1.77537C3.6007 1.66597 4.02583 1.53472 4.80406 1.50029C5.64798 1.46281 5.9012 1.45341 8.03589 1.45341C10.1739 1.45341 10.427 1.46281 11.2678 1.50029C12.0492 1.53472 12.4712 1.66597 12.7525 1.77537C13.0994 1.90345 13.4151 2.10661 13.6714 2.37229C13.9371 2.63174 14.1402 2.9443 14.2684 3.29129C14.3778 3.5726 14.5091 3.99761 14.5435 4.77596C14.581 5.61987 14.5904 5.87297 14.5904 8.00779C14.5904 10.1426 14.581 10.3927 14.5435 11.2366Z"
+              fill="white" />
+            <path
+              d="M8.02967 3.8916C5.76055 3.8916 3.91949 5.73254 3.91949 8.00178C3.91949 10.271 5.76055 12.112 8.02967 12.112C10.2989 12.112 12.1398 10.271 12.1398 8.00178C12.1398 5.73254 10.2989 3.8916 8.02967 3.8916ZM8.02967 10.6679C6.55758 10.6679 5.3635 9.47399 5.3635 8.00178C5.3635 6.52957 6.55758 5.33561 8.02967 5.33561C9.50188 5.33561 10.6958 6.52957 10.6958 8.00178C10.6958 9.47399 9.50188 10.6679 8.02967 10.6679Z"
+              fill="white" />
+            <path
+              d="M13.262 3.72858C13.262 4.25847 12.8324 4.68812 12.3024 4.68812C11.7725 4.68812 11.3428 4.25847 11.3428 3.72858C11.3428 3.19857 11.7725 2.76904 12.3024 2.76904C12.8324 2.76904 13.262 3.19857 13.262 3.72858Z"
+              fill="white" />
+          </g>
+          <defs>
+            <clipPath id="clip0_10_42">
+              <rect width="16"
+                height="16"
+                fill="white" />
+            </clipPath>
+          </defs>
+        </svg>
+      </div>
+    </div>
+    <div>
+      <div>
+        <ul>
+          <li>на главную</li>
+          <li>города</li>
+          <li>для водителей</li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <li>центр поддержки</li>
+          <li>вакансии</li>
+          <li>разработчики</li>
+          <li>блог</li>
+          <li>о нас</li>
+        </ul>
+      </div>
+      <div></div>
+    </div>
+    <div></div>
+  </footer>
+  <script type="module"
+    src="/src/main.js"></script>
+</body>
+
 </html>
