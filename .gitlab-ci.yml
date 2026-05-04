@@ -3,8 +3,9 @@ image: node:20-alpine
 pages:
   stage: deploy
   script:
-    - npm install
+    - npm ci
     - npm run build
+    - cp src/assets/uber-icon.png public/uber-icon.png
   artifacts:
     paths:
       - public
