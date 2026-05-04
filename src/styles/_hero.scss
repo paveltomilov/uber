@@ -27,7 +27,6 @@
   &__container {
     @include flex-column;
     @include flex-center;
-
     height: 100%;
   }
 
@@ -85,9 +84,31 @@
   &__button {
     padding: 24px 48px;
     margin-top: auto;
+    border: none;
+    border-radius: 8px;
+    background: $primary;
+    color: $white;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    @include transition;
+
+    &:hover {
+      background: $primary-light;
+    }
+
+    &:focus {
+      background: $primary-light;
+    }
+
+    &:active {
+      background: $primary-gray;
+    }
 
     @include mobile {
       padding: 16px 26px;
+      font-size: 14px;
     }
   }
 }

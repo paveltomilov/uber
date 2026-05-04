@@ -2,9 +2,37 @@
 @use "./mixins" as *;
 
 .footer {
+  &__hr {
+    width: 12%;
+    height: 3px;
+    background: $primary;
+
+    @include tablet {
+      width: 80%;
+      margin-top: 20px;
+    }
+  }
+
+  &__container {
+    @include flex-between;
+    margin: 0 auto;
+    padding: 20px 40px;
+
+    @include tablet {
+      flex-direction: column;
+      padding: 0;
+      padding-bottom: 20px;
+    }
+  }
+
   &__social {
     display: flex;
     gap: 10px;
+
+    @include tablet {
+      order: 2;
+      margin-bottom: 20px;
+    }
 
     &-item {
       width: 40px;
@@ -12,6 +40,157 @@
       @include flex-center;
       background: $dark;
       border-radius: 50%;
+      @include transition;
+      cursor: pointer;
+
+      &:hover {
+        background: $dark-light;
+
+        .footer__social-icon path {
+          fill: $primary;
+        }
+      }
+
+      &:focus {
+        background: $dark-light;
+
+        .footer__social-icon path {
+          fill: $primary;
+        }
+      }
+
+      &:active {
+        background: $dark-mode;
+
+        .footer__social-icon path {
+          fill: $primary-gray;
+        }
+      }
+
+      @include tablet {
+        width: 35px;
+        height: 35px;
+      }
     }
+
+    &-icon {
+      path {
+        fill: $white;
+        @include transition;
+      }
+    }
+  }
+
+  &__nav {
+    @include flex-column-center;
+    margin-left: 120px;
+
+    @include tablet {
+      order: 1;
+      margin: 0;
+      margin-bottom: 20px;
+    }
+
+    &-list {
+      display: flex;
+      gap: 20px;
+
+      @include tablet {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 13px;
+      }
+    }
+
+    &-col {
+      &--top {
+        padding: 10px;
+      }
+
+      &--bottom {
+        padding: 10px;
+      }
+    }
+
+    &-link--main,
+    &-link--cities,
+    &-link--drivers {
+      font-weight: 300;
+      font-size: 15px;
+      text-transform: uppercase;
+      color: #070716;
+      @include transition;
+
+      &:hover {
+        color: $primary-light;
+      }
+
+      &:focus {
+        color: $primary-light;
+      }
+
+      &:active {
+        color: $gray;
+      }
+
+      @include tablet {
+        font-size: 14px;
+      }
+    }
+
+    &-link--about,
+    &-link--blog,
+    &-link--dev,
+    &-link--jobs,
+    &-link--support {
+      font-weight: 300;
+      font-size: 11px;
+      text-transform: uppercase;
+      color: #999;
+      @include transition;
+
+      &:hover {
+        color: $primary-light;
+      }
+
+      &:focus {
+        color: $primary-light;
+      }
+
+      &:active {
+        color: $gray;
+      }
+    }
+  }
+
+  &__store {
+    @include tablet {
+      order: 3;
+    }
+  }
+}
+
+.languge__button {
+  font-weight: 400;
+  font-size: 11px;
+  text-transform: uppercase;
+  text-align: center;
+  color: $primary;
+  @include transition;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    color: $gray;
+  }
+
+  &:focus {
+    color: $dark;
+  }
+
+  &:active {
+    color: darken($primary, 10%);
   }
 }

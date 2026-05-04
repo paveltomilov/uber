@@ -60,6 +60,19 @@
     text-transform: uppercase;
     text-align: center;
     color: $primary;
+    @include transition;
+
+    &:hover {
+      color: $primary-light;
+    }
+
+    &:focus {
+      color: $primary-light;
+    }
+
+    &:active {
+      color: $primary-gray;
+    }
   }
 
   &__container-top {

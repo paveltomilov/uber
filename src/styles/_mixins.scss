@@ -154,7 +154,7 @@
 // ============================================
 
 // Плавный переход
-@mixin transition($properties: all, $duration: 0.3s, $easing: ease) {
+@mixin transition($properties: all, $duration: 0.3s, $easing: ease-in-out) {
   transition: $properties $duration $easing;
 }
 
