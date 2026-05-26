@@ -1,15 +1,9 @@
-image: node:20-alpine
-
 pages:
-  stage: deploy
   script:
     - npm ci
     - npm run build
-    - cp src/assets/uber-icon.png public/uber-icon.png
-pages:
-    path_prefix: "uber" 
-artifacts:
+  pages:
+    path_prefix: "uber" # <-- добавить эту секцию
+  artifacts:
     paths:
       - public
-only:
-    - main
