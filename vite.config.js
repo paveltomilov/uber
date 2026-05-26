@@ -2,7 +2,7 @@
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: "./",
+  base: "/work/uber/", // ← поменяли с "./" на конкретный путь
   build: {
     outDir: "public",
     emptyOutDir: true,
