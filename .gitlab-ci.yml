@@ -6,8 +6,10 @@ pages:
     - npm ci
     - npm run build
     - cp src/assets/uber-icon.png public/uber-icon.png
-  artifacts:
+pages:
+    path_prefix: "uber" 
+artifacts:
     paths:
       - public
-  only:
+only:
     - main
