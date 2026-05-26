@@ -1,9 +1,14 @@
+image: node:20-alpine
+
 pages:
+  stage: deploy
+  pages_path_prefix: "work/uber" # 👈 ЭТО КЛЮЧЕВОЕ ДОБАВЛЕНИЕ
   script:
     - npm ci
     - npm run build
-  pages:
-    path_prefix: "uber" # <-- добавить эту секцию
+    - cp src/assets/uber-icon.png public/uber-icon.png
   artifacts:
     paths:
       - public
+  only:
+    - main
