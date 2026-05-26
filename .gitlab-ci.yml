@@ -7,7 +7,7 @@ pages:
     - npm run build
     # Копируем в правильную папку на сервере
     - sudo mkdir -p /var/opt/gitlab/gitlab-rails/shared/pages/root/uber
-    - sudo cp -r public/* /var/opt/gitlab/gitlab-rails/shared/pages/root/uber
+    - sudo cp -r public/* /var/opt/gitlab/gitlab-rails/shared/pages/root/uber/
     - sudo chown -R git:git /var/opt/gitlab/gitlab-rails/shared/pages/root/uber
   artifacts:
     paths:
