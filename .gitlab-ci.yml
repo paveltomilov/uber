@@ -1,26 +1,48 @@
 image: node:20-alpine
 
 variables:
-  PROJECT_NAME: "uber"
+  PROJECT_NAME: "uber" # ← меняйте для каждого проекта
+  DEPLOY_HOST: "176.12.70.94"
+  DEPLOY_USER: "root"
+  DEPLOY_PATH: "/var/www/work/${PROJECT_NAME}"
+
+before_script:
+  - mkdir -p ~/.ssh
+  - chmod 700 ~/.ssh
+  - |
+    if [ -n "$DEPLOY_SSH_PRIVATE_KEY" ]; then
+      echo "$DEPLOY_SSH_PRIVATE_KEY" | base64 -d > ~/.ssh/id_ed25519
+      chmod 600 ~/.ssh/id_ed25519
+      ssh-keyscan -H $DEPLOY_HOST >> ~/.ssh/known_hosts 2>/dev/null
+    fi
 
 pages:
   stage: deploy
   script:
     - npm ci
     - npm run build
+    # Старый сервер (резерв) — если нужен
     - mkdir -p /var/opt/gitlab/gitlab-rails/shared/pages/root/work/$PROJECT_NAME
-    - cp -r public/* /var/opt/gitlab/gitlab-rails/shared/pages/root/work/$PROJECT_NAME/
+    - cp -rv public/* /var/opt/gitlab/gitlab-rails/shared/pages/root/work/$PROJECT_NAME/
+    # Новый сервер
+    - |
+      if [ -n "$DEPLOY_SSH_PRIVATE_KEY" ]; then
+        ssh ${DEPLOY_USER}@${DEPLOY_HOST} "mkdir -p ${DEPLOY_PATH}"
+        scp -r public/* ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}/
+      else
+        echo "SSH key not configured, skipping deploy to new server"
+      fi
   artifacts:
     paths:
       - public
   only:
     - main
 
+# Зеркалирование на GitHub
 mirror_to_github:
   stage: deploy
   script:
-    # Git уже установлен на сервере, не нужно устанавливать
-    - git push https://paveltomilov:${GITHUB_TOKEN}@github.com/paveltomilov/uber.git HEAD:main
+    - git push https://paveltomilov:${GITHUB_TOKEN}@github.com/paveltomilov/${PROJECT_NAME}.git HEAD:main || true
   only:
     - main
   needs: []
