@@ -2,6 +2,12 @@ image: node:20-alpine
 
 variables:
   PROJECT_NAME: "uber"
+  # GitHub репозиторий для зеркалирования (меняйте под каждый проект)
+  GITHUB_MIRROR_URL: "https://github.com/paveltomilov/uber.git"
+
+stages:
+  - deploy
+  - mirror
 
 pages:
   stage: deploy
@@ -15,3 +21,12 @@ pages:
       - public
   only:
     - main
+
+mirror_to_github:
+  stage: mirror
+  script:
+    # Зеркалирование всего репозитория на GitHub
+    - git push --prune --mirror https://paveltomilov:${GITHUB_TOKEN}@${GITHUB_MIRROR_URL#https://}
+  only:
+    - main
+  needs: [] # Не ждёт завершения pages, запускается параллельно
