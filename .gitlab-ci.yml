@@ -1,30 +1,27 @@
 image: node:20-alpine
 
 variables:
-  PROJECT_NAME: "uber" # ← меняйте для каждого проекта
+  PROJECT_NAME: "uber"
   DEPLOY_HOST: "176.12.70.94"
   DEPLOY_USER: "root"
   DEPLOY_PATH: "/var/www/work/${PROJECT_NAME}"
 
 before_script:
-  # Отладка: проверяем переменную
-  - echo "=== Checking SSH key variable ==="
-  - echo "DEPLOY_SSH_PRIVATE_KEY length: ${#DEPLOY_SSH_PRIVATE_KEY}"
+  # Простая проверка наличия переменной
   - |
     if [ -n "$DEPLOY_SSH_PRIVATE_KEY" ]; then
-      echo "Variable exists (first 20 chars: ${DEPLOY_SSH_PRIVATE_KEY:0:20})"
+      echo "✅ DEPLOY_SSH_PRIVATE_KEY is set"
     else
-      echo "ERROR: DEPLOY_SSH_PRIVATE_KEY is empty or not set"
+      echo "❌ ERROR: DEPLOY_SSH_PRIVATE_KEY is empty or not set"
     fi
   - mkdir -p ~/.ssh
   - chmod 700 ~/.ssh
   - |
     if [ -n "$DEPLOY_SSH_PRIVATE_KEY" ]; then
-      echo "Decoding SSH key..."
       echo "$DEPLOY_SSH_PRIVATE_KEY" | base64 -d > ~/.ssh/id_ed25519
       chmod 600 ~/.ssh/id_ed25519
       ssh-keyscan -H $DEPLOY_HOST >> ~/.ssh/known_hosts 2>/dev/null
-      echo "SSH key configured successfully"
+      echo "✅ SSH key configured"
     fi
 
 pages:
@@ -38,12 +35,12 @@ pages:
     # Новый сервер
     - |
       if [ -n "$DEPLOY_SSH_PRIVATE_KEY" ]; then
-        echo "Deploying to new server ${DEPLOY_HOST}..."
+        echo "🚀 Deploying to new server ${DEPLOY_HOST}..."
         ssh ${DEPLOY_USER}@${DEPLOY_HOST} "mkdir -p ${DEPLOY_PATH}"
         scp -r public/* ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}/
-        echo "Deploy completed"
+        echo "✅ Deploy completed"
       else
-        echo "SSH key not configured, skipping deploy to new server"
+        echo "⚠️ SSH key not configured, skipping deploy to new server"
       fi
   artifacts:
     paths:
@@ -51,7 +48,6 @@ pages:
   only:
     - main
 
-# Зеркалирование на GitHub
 mirror_to_github:
   stage: deploy
   script:
