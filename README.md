@@ -68,3 +68,6 @@ npm run build
 ```bash
 npm run preview
 ```
+
+Демо:
+https://paveltomilov.ru/work/uber
