@@ -18,10 +18,8 @@ pages:
 
 mirror_to_github:
   stage: deploy
-  before_script:
-    - apk add --no-cache git
   script:
-    # Отправляем только ветку main, не все refs
+    # Git уже установлен на сервере, не нужно устанавливать
     - git push https://paveltomilov:${GITHUB_TOKEN}@github.com/paveltomilov/uber.git HEAD:main
   only:
     - main
