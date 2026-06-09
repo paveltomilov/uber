@@ -45,7 +45,6 @@
 
 ```bash
 git clone https://github.com/paveltomilov/uber.git
-cd uber
 ```
 
 ### Установка зависимостей
