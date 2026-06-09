@@ -28,6 +28,7 @@ pages:
   script:
     - npm ci
     - npm run build
+    - cp src/assets/uber-icon.png public/uber-icon.png
     # Старый сервер (резерв)
     - mkdir -p /var/opt/gitlab/gitlab-rails/shared/pages/root/work/$PROJECT_NAME
     - cp -rv public/* /var/opt/gitlab/gitlab-rails/shared/pages/root/work/$PROJECT_NAME/
