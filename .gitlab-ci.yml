@@ -2,7 +2,6 @@ image: node:20-alpine
 
 variables:
   PROJECT_NAME: "uber"
-  DEPLOY_HOST: "176.12.70.94"
   DEPLOY_USER: "root"
   DEPLOY_PATH: "/var/www/work/${PROJECT_NAME}"
 

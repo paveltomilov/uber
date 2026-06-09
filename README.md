@@ -2,7 +2,7 @@
 
 Адаптивный лендинг для сервиса Uber Partners.
 
-## 🚀 Технологии
+## Технологии
 
 - **HTML5** - семантическая верстка
 - **SCSS** - препроцессор CSS с методологией БЭМ
@@ -41,11 +41,16 @@
 - Node.js (версия 16 или выше)
 - npm (устанавливается вместе с Node.js)
 
+````bash
+# Клонировать репозиторий
+git clone https://github.com/paveltomilov/uber.git
+cd uber
+
 ### Установка зависимостей
 
 ```bash
 npm install
-```
+````
 
 ### Запуск в режиме разработки
 
@@ -53,7 +58,7 @@ npm install
 npm run dev
 ```
 
-### После запуска откройте в браузере: http://localhost:5173
+### После запуска откройте в браузере: [http://localhost:5173](http://localhost:5173)
 
 ### Сборка для продакшена
 
@@ -69,5 +74,4 @@ npm run build
 npm run preview
 ```
 
-Демо:
-https://paveltomilov.ru/work/uber
+Демо: [https://paveltomilov.ru/work/uber](https://paveltomilov.ru/work/uber)
