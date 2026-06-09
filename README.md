@@ -41,16 +41,18 @@
 - Node.js (версия 16 или выше)
 - npm (устанавливается вместе с Node.js)
 
-````bash
-# Клонировать репозиторий
+### Клонировать репозиторий
+
+```bash
 git clone https://github.com/paveltomilov/uber.git
 cd uber
+```
 
 ### Установка зависимостей
 
 ```bash
 npm install
-````
+```
 
 ### Запуск в режиме разработки
 
